@@ -90,5 +90,5 @@ affinity: {}
 ## authorisedEmailDomains - Policy Check
 alerts:
   email:
-    admin-group: admin@sndevopss.xyz
+    admin-group: admin@sndevops.xyz
     user-group : users@sndevops.xyz
