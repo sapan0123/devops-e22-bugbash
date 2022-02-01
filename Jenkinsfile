@@ -157,7 +157,10 @@ pipeline {
                               if(changeSetId != null){
 
                                     echo "Change set registration for ${changeSetId}"
-                                    changeSetRegResult = snDevOpsConfigRegisterPipeline(changesetNumber:"${changeSetId}")
+                                    if( params.disableChange == true )
+                                    {
+                                          changeSetRegResult = snDevOpsConfigRegisterPipeline(changesetNumber:"${changeSetId}")
+                                    }
                                     echo "change set registration set result ${changeSetRegResult}"
                                     
                               } else {
@@ -322,7 +325,10 @@ pipeline {
                   steps{
                         script{
                               echo "Devops Change trigger change request"
-                              snDevOpsChange()
+
+                              if( params.disableChange == true ) {
+                                    snDevOpsChange()
+                              }
 
                               echo "Exporting for App: ${appName} Deployable; ${deployableName} Exporter name ${exporterName} "
                               echo "Configfile exporter file name ${fullFileName}"
