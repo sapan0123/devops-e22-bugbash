@@ -159,10 +159,10 @@ pipeline {
                                     echo "Change set registration for ${changeSetId}"
                                     if( !params.disableChange )
                                     {
-                                          changeSetRegResult = snDevOpsConfigRegisterPipeline(changesetNumber:"${changeSetId}")
+                                          changeSetReqResult = snDevOpsConfigRegisterPipeline(changesetNumber:"${changeSetId}")
+                                          echo "change set registration set result ${changeSetReqResult}"
                                     }
-                                    echo "change set registration set result ${changeSetRegResult}"
-                                    
+                              
                               } else {
                                     
                                     error "Change set was not created"
