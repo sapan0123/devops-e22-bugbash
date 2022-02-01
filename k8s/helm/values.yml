@@ -86,3 +86,9 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+## authorisedEmailDomains - Policy Check
+alerts:
+  email:
+    admin-group: admin@sndevopss.xyz
+    user-group : users@sndevops.xyz
