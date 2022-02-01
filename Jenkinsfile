@@ -157,7 +157,7 @@ pipeline {
                               if(changeSetId != null){
 
                                     echo "Change set registration for ${changeSetId}"
-                                    if( params.disableChange == true )
+                                    if( !params.disableChange )
                                     {
                                           changeSetRegResult = snDevOpsConfigRegisterPipeline(changesetNumber:"${changeSetId}")
                                     }
@@ -326,7 +326,7 @@ pipeline {
                         script{
                               echo "Devops Change trigger change request"
 
-                              if( params.disableChange == true ) {
+                              if( !params.disableChange ) {
                                     snDevOpsChange()
                               }
 
