@@ -1,0 +1,40 @@
+---
+PRD:
+  vars:
+    paymentService:
+      database:
+        dbName: paymentX_PRD
+        dbUserName: root1
+        dbPassword: admin456
+        dbServer: db22.paymentPRDx.be
+        dbPort: 8080
+        dbIpAddress: 10.20.40.80
+        backup:
+          dbServer: db22.paymentPRDx.be
+  release-1.0:
+    vars: {}
+    paymentService-V1.0:
+      featureToggles:
+        paymentRefund: disabled
+        myPreferredPaymentMethods: disabled
+        invoicePrinting: disabled
+        payOnDelivery: disabled
+        payByVoucher: enabled
+      settings:
+        paypal: disabled
+        applePay: disabled
+        ogone: enabled
+        merchantId: 10334
+        paymentMethods: 1,3,5,6
+        allowed.billing.countries: 74,76,88,136,139,176,197
+        creditcards.cacf.type.ids: 43,44,45,46
+        creditcards.oney.type.ids: 33,34,35,36
+        included.availabilityids: 99,199
+        included.availabilityids.cacf: 1,20,99,120,199
+        included.warrantiestypeids.cacf: 19002,19005,19006,19009,19010,19011,19014,19016
+        dbIPAddress: 10.20.40.80
+        dbPort: 8080
+        dbConnectionString: root1:admin456 db22.paymentPRDx.be:8080 paymentX_PRD
+        dbConnectionStringBackup: root1:admin456 db22.paymentPRDx.be paymentX_PRD
+    logonService-V2.1:
+      googleApiKey: hfjdqjfoqnlqcjoiqjnclvkqslkdn,qkls12
