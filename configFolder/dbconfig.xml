@@ -1,1 +1,50 @@
-test
+<?xml version="1.0" encoding="UTF-8"?>
+<PRD>
+   <vars>
+      <paymentService>
+         <database>
+            <dbName>paymentX_PRD</dbName>
+            <dbUserName>root1</dbUserName>
+            <dbPassword>admin456</dbPassword>
+            <dbServer>db22.paymentPRDx.be</dbServer>
+            <dbPort>8080</dbPort>
+            <dbIpAddress>10.20.40.80</dbIpAddress>
+            <backup>
+               <dbServer>db22.paymentPRDx.be</dbServer>
+            </backup>
+         </database>
+      </paymentService>
+   </vars>
+   <release-1.0>
+      <vars />
+      <paymentService-V1.0>
+         <featureToggles>
+            <paymentRefund>disabled</paymentRefund>
+            <myPreferredPaymentMethods>disabled</myPreferredPaymentMethods>
+            <invoicePrinting>disabled</invoicePrinting>
+            <payOnDelivery>disabled</payOnDelivery>
+            <payByVoucher>enabled</payByVoucher>
+         </featureToggles>
+         <settings>
+            <paypal>disabled</paypal>
+            <applePay>disabled</applePay>
+            <ogone>enabled</ogone>
+            <merchantId>10334</merchantId>
+            <paymentMethods>1,3,5,6</paymentMethods>
+            <allowed.billing.countries>74,76,88,136,139,176,197</allowed.billing.countries>
+            <creditcards.cacf.type.ids>43,44,45,46</creditcards.cacf.type.ids>
+            <creditcards.oney.type.ids>33,34,35,36</creditcards.oney.type.ids>
+            <included.availabilityids>99,199</included.availabilityids>
+            <included.availabilityids.cacf>1,20,99,120,199</included.availabilityids.cacf>
+            <included.warrantiestypeids.cacf>19002,19005,19006,19009,19010,19011,19014,19016</included.warrantiestypeids.cacf>
+            <dbIPAddress>10.20.40.80</dbIPAddress>
+            <dbPort>8080</dbPort>
+            <dbConnectionString>root1:admin456 db22.paymentPRDx.be:8080 paymentX_PRD</dbConnectionString>
+            <dbConnectionStringBackup>root1:admin456 db22.paymentPRDx.be paymentX_PRD</dbConnectionStringBackup>
+         </settings>
+      </paymentService-V1.0>
+      <logonService-V2.1>
+         <googleApiKey>hfjdqjfoqnlqcjoiqjnclvkqslkdn,qkls12</googleApiKey>
+      </logonService-V2.1>
+   </release-1.0>
+</PRD>
